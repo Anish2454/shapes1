@@ -71,6 +71,8 @@ def make_rotZ( theta ):
 
 def print_matrix( matrix ):
     s = ''
+    if len(matrix) < 1:
+        return
     for r in range( len( matrix[0] ) ):
         for c in range( len(matrix) ):
             s+= str(matrix[c][r]) + ' '
@@ -89,7 +91,7 @@ def scalar_mult( matrix, s ):
     for r in range( len( matrix[0] ) ):
         for c in range( len(matrix) ):
             matrix[c][r]*= s
-            
+
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
 
@@ -97,7 +99,7 @@ def matrix_mult( m1, m2 ):
     for row in m2:
         #get a copy of the next point
         tmp = row[:]
-        
+
         for r in range(4):
             m2[point][r] = (m1[0][r] * tmp[0] +
                             m1[1][r] * tmp[1] +

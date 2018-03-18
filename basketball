@@ -1,0 +1,17 @@
+box
+399 450 0 25 450 25
+box
+389 450 50 10 150 250
+torus
+320 335 -75 4 60
+sphere
+175 250 -100 30
+ident
+rotate
+y 40
+move
+50 0 0
+apply
+display
+save
+ball.png
